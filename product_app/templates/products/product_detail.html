@@ -1,0 +1,13 @@
+{%extends 'base_html.html'%}
+{%block content%}
+<div class="container jumbotron bg-sucess">
+    <h1>In app template{{ o.title }}</h1>
+<p class="lead">{%if o.description != None and o.description != '' %}{{ o.description }} {%else%}Description is coming soon!{%endif%}<p>
+<p>{{o.price}}</p>
+<h2 >{{o.sumary}}</h2>
+<h1><img src="{{o.image.url}}" alt="no image"></h1>
+<a href="../" class="btn btn-primary">Go Back</a>
+</div>
+<img src="" alt="">
+<input type="radio" name="" value="{{featured}}"> 
+{%endblock%}

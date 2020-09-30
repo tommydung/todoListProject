@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This page is content information for all page</title>
+    <link href="{% static 'css/app.css' %}" rel="stylesheet">
+    <link href="{% static 'css/main.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,300,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
+</head>
+<body>
+   {%include 'navbar.html'%}
+    <section id="showcase" class="d-flex justify-content-center align-items-center">
+        <div id="overlay"></div>
+        <div id="header" class=" container text-white text-center">
+            <h3 class="display-5 mb-0">MODERN CAMPING</h3>
+            <h1 class="display-1">{{insert_me}}AURORA GROVE</h1>
+            <p class="lead d-none d-md-block">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nulla laboriosam tempora quasi quas at.</p>
+            <button id="book_now" class="btn btn-lg btn-primary px-5" data-toggle="modal" data-target="#bookingModal">BOOK NOW</button>
+ 
+        </div>
+    </section>
+</section>
+<div class="modal" id="bookingModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">New Booking</h5>
+                <button type="menu" class="close" data-dismiss="modal" aria-label="close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p class="lead">Please fill out the form below and we'll get back to you as soon as possible</p>
+                 <form action="">
+                     <div class="form-group">
+                         <label for="email">Email Address</label>
+                         <input type="email" class="form-control"name="" id="email" aria-placeholder="name@example.com">
+                     </div>
+                     <div class="form-group">
+                         <label for="adults">Number of Adults</label>
+                         <select class="form-control" name="" id="adults">
+                             <option value="1">1</option>
+                             <option value="2">2</option>
+                             <option value="3">3</option>
+                             <option value="4">4</option>
+                         </select>
+                         
+                     </div>
+                     <div class="form-group">
+                         <label for="children">Number of Children</label>
+                         <select class="form-control" name="" id="children">
+                             <option value="0">0</option>
+                             <option value="1">1</option>
+                             <option value="2">2</option>
+                             <option value="3">3</option>
+                             <option value="4">4</option>
+                         </select>
+                         
+                     </div>
+                     <div class="form-group">
+                         <label for="request"></label>
+                         <textarea class="form-control" name="" id="request"  rows="3"></textarea>
+                     </div>
+                 </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary">Submit Request</button>
+                <button class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    {% block content%}
+    
+     {% endblock %}
+     <section id="footer" class="p-3 bg-secondary">
+        <ul class=" nav text-center justify-content-center flex-column flex-sm-row ">
+            <li class="nav-item">
+                <a href="" class="nav-link text-white ">FAQ</a>
+            </li>
+            <li class="nav-item">
+                 <a href="" class="nav-link text-white">EXPERIENCE</a>
+             </li>
+             <li class="nav-item">
+                 <a href="" class="nav-link text-white">EXPLORE</a>
+             </li>
+             <li class="nav-item">
+                 <a href="" class="nav-link text-white">CONTACT</a>
+             </li>
+             <li class="nav-item">
+                 <a href="" class="nav-link text-white" data-toggle="modal" data-target="#bookingModal">BOOK NOW</a>
+             </li>
+ 
+        </ul>
+ 
+    </section>
+     <script src="{%static 'js/jquery-3.3.1.slim.min.js' %}" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- <script src="{%static 'js/popper.min.js' %}" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" -->
+        <!-- crossorigin="anonymous"></script> -->
+    <script src="{%static 'js/bootstrap-4.5.2/dist/js/bootstrap.min.js'%}"></script>
+    <script src="{%static 'js/app.js' %}"></script>
+    <!-- <script src="{% static 'js/bootstrap-4.5.2/js/jquery.min.js' %}"></script> -->
+    <!-- <script src="{% static 'js/bootstrap-4.5.2/js/bootstrap.bundle.min.js' %}"></script> -->
+</body>
+</html>

@@ -1,0 +1,15 @@
+{%extends 'base_html.html'%}
+{%block content%}
+<div class="container jumbotron  bg-grey">
+   <form action="{{ instance.get_absolute_url_update }}" method="POST">
+       {%csrf_token%}
+       {{form.as_p}}
+       <!-- <input type="text" name="title" placeholder="Your Title" id=""> -->
+       <input class="btn btn-primary" type="Submit"  value="Save" name="" id="">
+       <a href="../" class="btn btn-primary">Go Back</a>
+   </form>
+
+</div>
+
+<!-- <input type="radio" name="gender" value="{{featured}}"> -->
+{%endblock%}

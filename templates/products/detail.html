@@ -1,0 +1,12 @@
+{%extends 'base_html.html'%}
+{%block content%}
+<div class="container jumbotron bg-primary">
+    <h1>{{ o.title }}</h1>
+<p class="lead">{%if o.description != None and o.description != '' %}{{ o.description }} {%else%}Description is coming soon!{%endif%}<p>
+<p>{{o.price}}</p>
+<h2 >{{o.sumary}}</h2>
+
+</div>
+
+<!-- <input type="radio" name="gender" value="{{featured}}"> -->
+{%endblock%}

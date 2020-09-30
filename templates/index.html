@@ -1,0 +1,50 @@
+    {% extends 'base_html.html'%}
+   
+    {% block content%}  
+    <section  >
+        <div class="container jumbotron bg-gray mt-10">
+            <h1>Welcome to my webpage</h1>
+            <h2>{{request.user| cut:'dustin'}}</h2> 
+            <a  class="btn btn-primary" href="http://127.0.0.1:8000/products">Product List</a>
+        </div>
+    </section>
+ <!-- <div class="containter jumbotron text-center">   <form>
+    
+      <h3>SUPPORT NATURE WITH AS LOW AS $1</h3>
+      <button type="button" onClick="payWithRave()">Donate Here</button>
+  </form></div>
+  <script src="https://api.ravepay.co/flwv3-pug/getpaidx/api/flwpbf-inline.js"></script>
+      <script>
+          const publicKey = "{{ key }}";
+  
+          function payWithRave() {
+              var x = getpaidSetup({
+                  PBFPubKey: publicKey,
+                  customer_email: "tommydung@gmail.com",
+                  amount: 1,
+                  customer_phone: "346-666-8010",
+                  currency: "USD",
+                  txref: "rave-123456",
+                  custom_title: "Wildlife Park",
+                  onclose: function() {},
+                  callback: function(response) {
+                    var txref = response.tx.txRef;
+                        console.log("This is the response returned after a charge", response);
+                        if (
+                            response.tx.chargeResponseCode == "00" ||
+                            response.tx.chargeResponseCode == "0"
+                        ) {
+                            document.location.href = "success.html"
+                                // redirect to a success page
+                        } else {
+                            // redirect to a failure page.
+                        }
+                        x.close();
+                  }
+              });
+          }
+          
+      </script> -->
+  
+    {% endblock %}
+  
